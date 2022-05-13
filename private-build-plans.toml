@@ -1,0 +1,167 @@
+[buildPlans.lj-iosevka-term]
+family = "LJ's Iosevka Term"
+spacing = "fontconfig-mono"
+serifs = "sans"
+no-cv-ss = false
+export-glyph-names = true
+
+
+[buildPlans.lj-iosevka-term.variants.design]
+capital-d = "more-rounded-serifless"
+capital-g = "toothless-rounded-serifless-hooked"
+capital-h = "top-left-bottom-right-serifed"
+capital-i = "serifed"
+capital-j = "serifed"
+capital-k = "straight-serifless"
+capital-l = "motion-serifed"
+capital-m = "hanging-motion-serifed"
+capital-n = "motion-serifed"
+capital-p = "closed"
+capital-q = "crossing"
+capital-r = "straight"
+capital-t = "serifless"
+capital-u = "toothless-rounded-unilateral-motion-serifed"
+capital-v = "straight"
+capital-w = "straight"
+capital-x = "straight-serifless"
+a = "double-storey-serifless"
+d = "toothed-serifless"
+f = "serifless"
+g = "double-storey"
+i = "tailed-serifed"
+j = "serifed"
+l = "tailed-serifed"
+m = "short-leg"
+p = "eared"
+q = "earless-corner-diagonal-tailed"
+u = "tailed"
+x = "straight-serifless"
+y = "cursive-flat-hook"
+z = "straight-serifless"
+zero = "slashed"
+one = "base-flat-top-serif"
+five = "vertical-upper-left-bar"
+six = "straight-bar"
+seven = "straight-serifless"
+eight = "crossing"
+nine = "open-contour"
+tilde = "low"
+asterisk = "hex-high"
+underscore = "above-baseline"
+caret = "medium"
+paren = "normal"
+brace = "curly-flat-boundary"
+ampersand = "et-toothed"
+at = "threefold-tall"
+dollar = "through"
+percent = "rings-continuous-slash"
+bar = "force-upright"
+ascii-single-quote = "straight"
+ascii-grave = "straight"
+question = "smooth"
+punctuation-dot = "round"
+
+
+[buildPlans.lj-iosevka-term.ligations]
+enables = ["kern-dotty", "kern-bars"]
+
+
+[buildPlans.lj-iosevka-term.widths.normal]
+shape = 547
+menu = 6
+css = "normal"
+
+[buildPlans.lj-iosevka-term.widths.extended]
+shape = 657
+menu = 8
+css = "expanded"
+
+
+
+
+
+
+
+
+
+
+
+
+
+[buildPlans.lj-iosevka-etoile]
+family = "LJ's Iosevka Etoile"
+spacing = "quasi-proportional"
+serifs = "slab"
+no-cv-ss = false
+export-glyph-names = true
+
+[buildPlans.lj-iosevka-etoile.variants.design]
+capital-d = "more-rounded-serifless"
+capital-g = "toothless-rounded-serifless-hooked"
+capital-h = "top-left-bottom-right-serifed"
+capital-i = "serifed"
+capital-j = "serifed"
+capital-k = "straight-serifless"
+capital-l = "motion-serifed"
+capital-m = "hanging-motion-serifed"
+capital-n = "motion-serifed"
+capital-p = "closed"
+capital-q = "crossing"
+capital-r = "straight"
+capital-t = "serifless"
+capital-u = "toothless-rounded-unilateral-motion-serifed"
+capital-v = "straight"
+capital-w = "straight"
+capital-x = "straight-serifless"
+a = "double-storey-serifless"
+d = "toothed-serifless"
+f = "serifless"
+g = "double-storey"
+i = "tailed-serifed"
+j = "serifed"
+l = "tailed-serifed"
+m = "short-leg"
+p = "eared"
+q = "earless-corner-diagonal-tailed"
+u = "tailed"
+x = "straight-serifless"
+y = "cursive-flat-hook"
+z = "straight-serifless"
+zero = "slashed"
+one = "base-flat-top-serif"
+five = "vertical-upper-left-bar"
+six = "straight-bar"
+seven = "straight-serifless"
+eight = "crossing"
+nine = "open-contour"
+tilde = "low"
+asterisk = "hex-high"
+underscore = "above-baseline"
+caret = "medium"
+paren = "normal"
+brace = "curly-flat-boundary"
+ampersand = "et-toothed"
+at = "threefold-tall"
+dollar = "through"
+percent = "rings-continuous-slash"
+bar = "force-upright"
+ascii-single-quote = "straight"
+ascii-grave = "straight"
+question = "smooth"
+punctuation-dot = "round"
+
+
+[buildPlans.lj-iosevka-etoile.ligations]
+enables = ["arrow", "kern-dotty", "kern-bars", "lteq-as-arrow"]
+
+
+[buildPlans.lj-iosevka-etoile.widths.normal]
+shape = 547
+menu = 6
+css = "normal"
+
+[buildPlans.lj-iosevka-etoile.widths.extended]
+shape = 657
+menu = 8
+css = "expanded"
+

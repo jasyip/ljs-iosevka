@@ -47,10 +47,10 @@ font-src/meta/**/*.js
 font-src/otl/**/*.js
 font-src/glyphs/**/*.js
 
-private.toml
-private-build-plans.toml
-private.mk
-params/private-parameters.toml
+# private.toml
+# private-build-plans.toml
+# private.mk
+# params/private-parameters.toml
 
 # Ignore tmp directory
 tmp

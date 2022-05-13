@@ -1,0 +1,104 @@
+name: build fonts
+on: [push]
+jobs:
+  build:
+    # if: github.ref != 'refs/heads/builds'
+    runs-on: ubuntu-latest
+    timeout-minutes: 1440
+    steps:
+      - uses: actions/checkout@v3
+
+      # - name: Run Git LFS
+      #   run: git lfs install
+
+      - name: Cache pnpm
+        uses: actions/cache@v2
+        with:
+          path: ~/.pnpm-store
+          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2.2.1
+        with:
+          version: latest
+          run_install: true
+
+      - name: apt install ttfautohint xz-utils
+        run: |
+          sudo apt update
+          sudo apt install -y --no-install-recommends ttfautohint xz-utils
+
+      - name: LJ's Iosevka Term
+        run: echo "font-name=lj-iosevka-term" >> $GITHUB_ENV
+
+      - name: Setup file names
+        run: |
+          echo "hinted-name=${{ env.font-name }}" >> $GITHUB_ENV
+          echo "unhinted-name=${{ env.font-name }}-unhinted" >> $GITHUB_ENV
+
+      - name: Build LJ's Iosevka Term
+        run: pnpm run build -- ttf::${{ env.font-name }}
+
+      # - name: Compress LJ's Iosevka Term (Hinted)
+      #   working-directory: "dist/${{ env.font-name }}/ttf"
+      #   run: tar -cf "${{ env.hinted-name }}.tar.xz" --remove-files --use-compress-program="xz -9" *
+
+      # - name: Compress LJ's Iosevka Term (Unhinted)
+      #   working-directory: "dist/${{ env.font-name }}/ttf-unhinted"
+      #   run: tar -cf "${{ env.unhinted-name }}.tar.xz" --remove-files --use-compress-program="xz -9" *
+
+      # - name: Cleanup LJ's Iosevka Term
+      #   working-directory: "dist"
+      #   run: |
+      #     mv "${{ env.font-name }}/ttf/${{ env.hinted-name }}.tar.xz" .
+      #     mv "${{ env.font-name }}/ttf-unhinted/${{ env.unhinted-name }}.tar.xz" .
+      #     rm -r "${{ env.font-name }}"
+
+
+
+      - name: LJ's Iosevka Etoile
+        run: echo "font-name=lj-iosevka-etoile" >> $GITHUB_ENV
+
+      - name: Setup file names
+        run: |
+          echo "hinted-name=${{ env.font-name }}" >> $GITHUB_ENV
+          echo "unhinted-name=${{ env.font-name }}-unhinted" >> $GITHUB_ENV
+
+      - name: Build LJ's Iosevka Etoile
+        run: pnpm run build -- ttf::${{ env.font-name }}
+
+      # - name: Compress LJ's Iosevka Etoile (Hinted)
+      #   working-directory: "dist/${{ env.font-name }}/ttf"
+      #   run: tar -cf "${{ env.hinted-name }}.tar.xz" --remove-files --use-compress-program="xz -9" *
+
+      # - name: Compress LJ's Iosevka Etoile (Unhinted)
+      #   working-directory: "dist/${{ env.font-name }}/ttf-unhinted"
+      #   run: tar -cf "${{ env.unhinted-name }}.tar.xz" --remove-files --use-compress-program="xz -9" *
+
+      # - name: Cleanup LJ's Iosevka Etoile
+      #   working-directory: "dist"
+      #   run: |
+      #     mv "${{ env.font-name }}/ttf/${{ env.hinted-name }}.tar.xz" .
+      #     mv "${{ env.font-name }}/ttf-unhinted/${{ env.unhinted-name }}.tar.xz" .
+      #     rm -r "${{ env.font-name }}"
+
+      - name: Remove files unnecessary to the build commit
+        run: find -mindepth 1 -maxdepth 1 -not -name 'dist' -not -name '.git' -not -name '.github' -not -name '.gitignore' -not -name '.gitattributes' -print0 | xargs -0 rm -r --
+
+      # - name: git maintenance
+      #   run: |
+      #     git maintenance run --task gc
+      #     git maintenance run --task loose-objects --task incremental-repack
+      - name: Compress into tar
+        working-directory: "dist"
+        run: tar -cf "${{ env.font-name }}.tar.xz" --remove-files --use-compress-program="xz -9" *
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: Built TTF files
+          path: "dist/${{ env.font-name }}.tar.xz"
+          if-no-files-found: error
+
