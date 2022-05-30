@@ -196,11 +196,9 @@ glyph-block Letter-Latin-Lower-Y : begin
 			set currentGlyph.gizmo : Italify (-para.slopeAngle)
 			include : SmallYShape top bottom
 			set currentGlyph.gizmo : Italify (+para.slopeAngle)
-			# include : Upright
 			include : Translate 0 (-[mix bottom top 0.5])
 			include : Scale 1 (-1)
 			include : Translate 0 (+[mix bottom top 0.5])
-			# include : Italify
 
 		return : object SmallYShape SmallYHookTopShape SmallLambdaShape
 
@@ -360,12 +358,12 @@ glyph-block Letter-Latin-Lower-Y : begin
 	foreach { suffix { fStraight fTurn slabType } } [Object.entries LambdaConfig] : do
 		create-glyph "grek/lambda.\(suffix)" : glyph-proc
 			include : MarkSet.b
-			include : [GenSmallYShape fStraight fTurn slabType].SmallLambdaShape CAP 0
+			include : [GenSmallYShape fStraight fTurn slabType].SmallLambdaShape Ascender 0
 		create-glyph "lambdaSlash.\(suffix)" : glyph-proc
 			include : MarkSet.b
 			include : union
 				LambdaBarOverlayShape
-				[GenSmallYShape fStraight fTurn slabType].SmallLambdaShape CAP 0
+				[GenSmallYShape fStraight fTurn slabType].SmallLambdaShape Ascender 0
 
 	select-variant 'grek/lambda' 0x3BB
 	select-variant 'lambdaSlash' 0x19B (follow -- 'grek/lambda')
@@ -373,7 +371,6 @@ glyph-block Letter-Latin-Lower-Y : begin
 	# Blackboard
 	glyph-block-import Letter-Blackboard : BBS BBD
 	create-glyph 'mathbb/y' 0x1D56A : glyph-proc
-		local yCross : CAP * 0.4
 		local kDiag : DiagCorDs XH ((RightSB - SB) / 2) (BBD * 0.25)
 		include : MarkSet.p
 		include : HBarTop SB (SB + kDiag * BBD) XH BBS
