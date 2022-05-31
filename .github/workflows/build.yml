@@ -27,8 +27,8 @@ jobs:
 
       - name: apt install ttfautohint xz-utils
         run: |
-          sudo apt update
-          sudo apt install -y --no-install-recommends ttfautohint xz-utils
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends ttfautohint xz-utils
 
       - name: LJ's Iosevka
         run: echo "font-name=lj-iosevka" >> $GITHUB_ENV
@@ -96,7 +96,7 @@ jobs:
       #     git maintenance run --task loose-objects --task incremental-repack
       - name: Compress into tar
         working-directory: "dist"
-        run: tar -cf "${{ env.font-name }}.tar" --remove-files *
+        run: tar -cf "${{ env.font-name }}.tar" --remove-files --use-compress-program="xz -9" *
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
