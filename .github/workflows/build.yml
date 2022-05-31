@@ -102,6 +102,6 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: built_fonts
-          path: "dist/${{ env.cur-font-name }}.tar"
+          path: "dist/${{ env.font-name }}.tar"
           if-no-files-found: error
 
