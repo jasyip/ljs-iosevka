@@ -96,12 +96,12 @@ jobs:
       #     git maintenance run --task loose-objects --task incremental-repack
       - name: Compress into tar
         working-directory: "dist"
-        run: tar -cf "${{ env.font-name }}.tar" --remove-files --use-compress-program="xz -9" *
+        run: tar -cf "${{ env.font-name }}.tar.xz" --remove-files --use-compress-program="xz -9" *
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
           name: built_fonts
-          path: "dist/${{ env.font-name }}.tar"
+          path: "dist/${{ env.font-name }}.tar.xz"
           if-no-files-found: error
 
