@@ -161,7 +161,7 @@ menu = 6
 css = "normal"
 
 [buildPlans.lj-iosevka-etoile.widths.extended]
-shape = 657
-menu = 8
+shape = 600
+menu = 7
 css = "expanded"
 
