@@ -86,36 +86,16 @@ jobs:
       - name: Build LJ's Iosevka Etoile
         run: pnpm run build -- ttf::${{ env.cur-font-name }}
 
-      # - name: Compress LJ's Iosevka Etoile (Hinted)
-      #   working-directory: "dist/${{ env.cur-font-name }}/ttf"
-      #   run: tar -cf "${{ env.hinted-name }}.tar.xz" --remove-files --use-compress-program="xz -9" *
-
-      # - name: Compress LJ's Iosevka Etoile (Unhinted)
-      #   working-directory: "dist/${{ env.cur-font-name }}/ttf-unhinted"
-      #   run: tar -cf "${{ env.unhinted-name }}.tar.xz" --remove-files --use-compress-program="xz -9" *
-
-      # - name: Cleanup LJ's Iosevka Etoile
-      #   working-directory: "dist"
-      #   run: |
-      #     mv "${{ env.cur-font-name }}/ttf/${{ env.hinted-name }}.tar.xz" .
-      #     mv "${{ env.cur-font-name }}/ttf-unhinted/${{ env.unhinted-name }}.tar.xz" .
-      #     rm -r "${{ env.cur-font-name }}"
 
       - name: Remove files unnecessary to the build commit
         run: find -mindepth 1 -maxdepth 1 -not -name 'dist' -not -name '.git' -not -name '.github' -not -name '.gitignore' -not -name '.gitattributes' -print0 | xargs -0 rm -r --
 
-      # - name: git maintenance
-      #   run: |
-      #     git maintenance run --task gc
-      #     git maintenance run --task loose-objects --task incremental-repack
-      - name: Compress into tar
-        working-directory: "dist"
-        run: tar -cf "${{ env.font-name }}.tpxz" --remove-files --use-compress-program="pixz -9" *
-
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
+        working-directory: "dist"
         with:
-          name: built_fonts
-          path: "dist/${{ env.font-name }}.tpxz"
+          name: "${{ env.font-name }}"
+          path: "*"
           if-no-files-found: error
+          retention-days: 90
 
