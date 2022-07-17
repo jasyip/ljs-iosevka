@@ -10,23 +10,34 @@ jobs:
 
       # - name: Run Git LFS
       #   run: git lfs install
-
-      - name: Cache pnpm
-        uses: actions/cache@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
-          path: ~/.pnpm-store
-          key: ${{ runner.os }}-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-
+          node-version: *
 
       - name: Setup PNPM
         uses: pnpm/action-setup@v2
+        id: pnpm-install
         with:
           version: latest
-          run_install: true
 
-      - name: Update PNPM
-        run: pnpm up
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+
+      - name: Install dependencies
+        run: pnpm install
+
 
       - name: apt install ttfautohint pixz
         run: |
