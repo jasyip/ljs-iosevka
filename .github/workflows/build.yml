@@ -21,6 +21,10 @@ jobs:
         with:
           version: latest
 
+      - name: Configure PNPM settings
+        run: |
+          pnpm config set progress false
+
       - name: Get pnpm store directory
         id: pnpm-cache
         run: |
@@ -39,10 +43,10 @@ jobs:
         run: pnpm install
 
 
-      - name: apt install ttfautohint pixz
+      - name: Install ttfautohint
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends ttfautohint pixz
+          sudo apt-get install -y --no-install-recommends libttfautohint-dev
 
       - name: LJ's Iosevka
         run: echo "font-name=lj-iosevka" >> $GITHUB_ENV
@@ -57,6 +61,7 @@ jobs:
 
       - name: Build LJ's Iosevka Term
         run: pnpm run build -- ttf::${{ env.cur-font-name }}
+
 
       # - name: Compress LJ's Iosevka Term (Hinted)
       #   working-directory: "dist/${{ env.cur-font-name }}/ttf"
