@@ -46,7 +46,7 @@ jobs:
       - name: Install ttfautohint
         run: |
           sudo apt-get update
-          sudo apt-get install -y --no-install-recommends libttfautohint-dev
+          sudo apt-get install -y --no-install-recommends ttfautohint
 
       - name: LJ's Iosevka
         run: echo "font-name=lj-iosevka" >> $GITHUB_ENV
