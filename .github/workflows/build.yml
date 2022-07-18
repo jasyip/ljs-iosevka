@@ -92,10 +92,9 @@ jobs:
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
-        working-directory: "dist"
         with:
           name: "${{ env.font-name }}"
-          path: "*"
+          path: "dist/*"
           if-no-files-found: error
           retention-days: 90
 
