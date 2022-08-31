@@ -160,7 +160,7 @@ shape = 547
 menu = 6
 css = "normal"
 
-[buildPlans.lj-iosevka-etoile.widths.normal]
+[buildPlans.lj-iosevka-etoile.widths.semi-extended]
 shape = 600
 menu = 7
 css = "semi-expanded"
