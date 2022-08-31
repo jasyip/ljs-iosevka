@@ -71,9 +71,14 @@ shape = 547
 menu = 6
 css = "normal"
 
-[buildPlans.lj-iosevka-term.widths.extended]
+[buildPlans.lj-iosevka-term.widths.semi-extended]
 shape = 600
 menu = 7
+css = "semi-expanded"
+
+[buildPlans.lj-iosevka-term.widths.extended]
+shape = 657
+menu = 8
 css = "expanded"
 
 
