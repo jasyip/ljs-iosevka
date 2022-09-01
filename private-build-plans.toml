@@ -84,7 +84,7 @@ css = "normal"
 [buildPlans.lj-iosevka-term.widths.semi-extended]
 shape = 547
 menu = 6
-css = "semi-extended"
+css = "semi-expanded"
 
 [buildPlans.lj-iosevka-term.widths.extended]
 shape = 600
@@ -200,7 +200,7 @@ css = "normal"
 [buildPlans.lj-iosevka-etoile.widths.semi-extended]
 shape = 547
 menu = 6
-css = "semi-extended"
+css = "semi-expanded"
 
 [buildPlans.lj-iosevka-etoile.widths.extended]
 shape = 600
