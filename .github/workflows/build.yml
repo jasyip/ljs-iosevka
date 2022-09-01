@@ -3,8 +3,7 @@ on: [push]
 jobs:
   build:
     # if: github.ref != 'refs/heads/builds'
-    runs-on: ubuntu-latest
-    timeout-minutes: 1440
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
 
@@ -48,58 +47,18 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y --no-install-recommends ttfautohint
 
-      - name: LJ's Iosevka
-        run: echo "font-name=lj-iosevka" >> $GITHUB_ENV
-
-      - name: LJ's Iosevka Term
-        run: echo "cur-font-name=${{ env.font-name }}-term" >> $GITHUB_ENV
-
-      - name: Setup file names
-        run: |
-          echo "hinted-name=${{ env.cur-font-name }}" >> $GITHUB_ENV
-          echo "unhinted-name=${{ env.cur-font-name }}-unhinted" >> $GITHUB_ENV
-
-      - name: Build LJ's Iosevka Term
-        run: pnpm run build -- ttf::${{ env.cur-font-name }}
-
-
-      # - name: Compress LJ's Iosevka Term (Hinted)
-      #   working-directory: "dist/${{ env.cur-font-name }}/ttf"
-      #   run: tar -cf "${{ env.hinted-name }}.tar.xz" --remove-files --use-compress-program="xz -9" *
-
-      # - name: Compress LJ's Iosevka Term (Unhinted)
-      #   working-directory: "dist/${{ env.cur-font-name }}/ttf-unhinted"
-      #   run: tar -cf "${{ env.unhinted-name }}.tar.xz" --remove-files --use-compress-program="xz -9" *
-
-      # - name: Cleanup LJ's Iosevka Term
-      #   working-directory: "dist"
-      #   run: |
-      #     mv "${{ env.cur-font-name }}/ttf/${{ env.hinted-name }}.tar.xz" .
-      #     mv "${{ env.cur-font-name }}/ttf-unhinted/${{ env.unhinted-name }}.tar.xz" .
-      #     rm -r "${{ env.cur-font-name }}"
-
-
-
-      - name: LJ's Iosevka Etoile
-        run: echo "cur-font-name=${{ env.font-name }}-etoile" >> $GITHUB_ENV
-
-      - name: Setup file names
-        run: |
-          echo "hinted-name=${{ env.cur-font-name }}" >> $GITHUB_ENV
-          echo "unhinted-name=${{ env.cur-font-name }}-unhinted" >> $GITHUB_ENV
-
-      - name: Build LJ's Iosevka Etoile
-        run: pnpm run build -- ttf::${{ env.cur-font-name }}
-
-
-      - name: Remove files unnecessary to the build commit
-        run: find -mindepth 1 -maxdepth 1 -not -name 'dist' -not -name '.git' -not -name '.github' -not -name '.gitignore' -not -name '.gitattributes' -print0 | xargs -0 rm -r --
+      - name: Build Font
+        run: pnpm run build -- ttf::${{ matrix.font-name }}
 
       - name: Upload Artifact
         uses: actions/upload-artifact@v3
         with:
-          name: "${{ env.font-name }}"
-          path: "dist/*"
+          name: "${{ matrix.font-name }}"
+          path: "dist/${{ matrix.font-name }}"
           if-no-files-found: error
           retention-days: 90
+
+    strategy:
+      matrix:
+        font-name: ["lj-iosevka-term", "lj-iosevka-etoile"]
 
