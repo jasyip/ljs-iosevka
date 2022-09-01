@@ -66,32 +66,41 @@ punctuation-dot = "round"
 enables = ["kern-dotty", "kern-bars"]
 
 
-[buildPlans.lj-iosevka-term.widths.ultra-condensed]
-menu = 1
-
-[buildPlans.lj-iosevka-term.widths.extra-condensed]
-menu = 2
-
 [buildPlans.lj-iosevka-term.widths.condensed]
+shape = 416
 menu = 3
+css = "condensed"
 
 [buildPlans.lj-iosevka-term.widths.semi-condensed]
+shape = 456
 menu = 4
+css = "semi-condensed"
 
 [buildPlans.lj-iosevka-term.widths.normal]
+shape = 500
 menu = 5
+css = "normal"
 
 [buildPlans.lj-iosevka-term.widths.semi-extended]
+shape = 547
 menu = 6
+css = "semi-extended"
 
 [buildPlans.lj-iosevka-term.widths.extended]
+shape = 600
 menu = 7
+css = "expanded"
+
 
 [buildPlans.lj-iosevka-term.widths.extra-extended]
+shape = 657
 menu = 8
+css = "extra-expanded"
 
 [buildPlans.lj-iosevka-term.widths.ultra-extended]
+shape = 720
 menu = 9
+css = "ultra-expanded"
 
 
 
@@ -172,29 +181,39 @@ punctuation-dot = "round"
 enables = ["arrow", "kern-dotty", "kern-bars", "lteq-as-arrow"]
 
 
-[buildPlans.lj-iosevka-etoile.widths.ultra-condensed]
-menu = 1
-
-[buildPlans.lj-iosevka-etoile.widths.extra-condensed]
-menu = 2
 
 [buildPlans.lj-iosevka-etoile.widths.condensed]
+shape = 416
 menu = 3
+css = "condensed"
 
 [buildPlans.lj-iosevka-etoile.widths.semi-condensed]
+shape = 456
 menu = 4
+css = "semi-condensed"
 
 [buildPlans.lj-iosevka-etoile.widths.normal]
+shape = 500
 menu = 5
+css = "normal"
 
 [buildPlans.lj-iosevka-etoile.widths.semi-extended]
+shape = 547
 menu = 6
+css = "semi-extended"
 
 [buildPlans.lj-iosevka-etoile.widths.extended]
+shape = 600
 menu = 7
+css = "expanded"
+
 
 [buildPlans.lj-iosevka-etoile.widths.extra-extended]
+shape = 657
 menu = 8
+css = "extra-expanded"
 
 [buildPlans.lj-iosevka-etoile.widths.ultra-extended]
+shape = 720
 menu = 9
+css = "ultra-expanded"
