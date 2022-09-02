@@ -67,16 +67,6 @@ enables = ["kern-dotty", "kern-bars"]
 
 
 
-[buildPlans.lj-iosevka-term.widths.condensed]
-shape = 416
-menu = 3
-css = "condensed"
-
-[buildPlans.lj-iosevka-term.widths.semi-condensed]
-shape = 456
-menu = 4
-css = "semi-condensed"
-
 [buildPlans.lj-iosevka-term.widths.normal]
 shape = 500
 menu = 5
@@ -184,25 +174,6 @@ enables = ["arrow", "kern-dotty", "kern-bars", "lteq-as-arrow"]
 
 
 
-[buildPlans.lj-iosevka-etoile.widths.ultra-condensed]
-shape = 416
-menu = 1
-css = "ultra-condensed"
-
-[buildPlans.lj-iosevka-etoile.widths.extra-condensed]
-shape = 456
-menu = 2
-css = "extra-condensed"
-
-[buildPlans.lj-iosevka-etoile.widths.condensed]
-shape = 500
-menu = 3
-css = "condensed"
-
-[buildPlans.lj-iosevka-etoile.widths.semi-condensed]
-shape = 547
-menu = 4
-css = "semi-condensed"
 
 [buildPlans.lj-iosevka-etoile.widths.normal]
 shape = 600
@@ -247,25 +218,6 @@ w = 'straight-flat-top'
 f = "flat-hook-tailed"
 
 
-[buildPlans.iosevka-etoile.widths.ultra-condensed]
-shape = 416
-menu = 1
-css = "ultra-condensed"
-
-[buildPlans.iosevka-etoile.widths.extra-condensed]
-shape = 456
-menu = 2
-css = "extra-condensed"
-
-[buildPlans.iosevka-etoile.widths.condensed]
-shape = 500
-menu = 3
-css = "condensed"
-
-[buildPlans.iosevka-etoile.widths.semi-condensed]
-shape = 547
-menu = 4
-css = "semi-condensed"
 
 [buildPlans.iosevka-etoile.widths.semi-extended]
 shape = 657
@@ -351,26 +303,6 @@ cyrl-capital-u = "straight"
 at = "fourfold"
 percent = "rings-continuous-slash"
 
-
-[buildPlans.iosevka-aile.widths.ultra-condensed]
-shape = 416
-menu = 1
-css = "ultra-condensed"
-
-[buildPlans.iosevka-aile.widths.extra-condensed]
-shape = 456
-menu = 2
-css = "extra-condensed"
-
-[buildPlans.iosevka-aile.widths.condensed]
-shape = 500
-menu = 3
-css = "condensed"
-
-[buildPlans.iosevka-aile.widths.semi-condensed]
-shape = 547
-menu = 4
-css = "semi-condensed"
 
 [buildPlans.iosevka-aile.widths.semi-extended]
 shape = 657
