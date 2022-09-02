@@ -67,6 +67,11 @@ enables = ["kern-dotty", "kern-bars"]
 
 
 
+[buildPlans.lj-iosevka-term.widths.semi-condensed]
+shape = 456
+menu = 4
+css = "semi-condensed"
+
 [buildPlans.lj-iosevka-term.widths.normal]
 shape = 500
 menu = 5
@@ -163,25 +168,31 @@ enables = ["kern-dotty", "kern-bars"]
 
 
 
-[buildPlans.lj-iosevka-aile.widths.normal]
+[buildPlans.lj-iosevka-aile.widths.semi-condensed]
 shape = 500
 menu = 5
+css = "semi-condensed"
+
+[buildPlans.lj-iosevka-aile.widths.normal]
+shape = 547
+menu = 6
 css = "normal"
 
 [buildPlans.lj-iosevka-aile.widths.semi-extended]
-shape = 547
-menu = 6
+shape = 600
+menu = 7
 css = "semi-expanded"
 
 [buildPlans.lj-iosevka-aile.widths.extended]
-shape = 600
-menu = 7
+shape = 657
+menu = 8
 css = "expanded"
 
 [buildPlans.lj-iosevka-aile.widths.extra-extended]
-shape = 657
-menu = 8
+shape = 720
+menu = 9
 css = "extra-expanded"
+
 
 
 
@@ -261,23 +272,28 @@ enables = ["arrow", "kern-dotty", "kern-bars", "lteq-as-arrow"]
 
 
 
-[buildPlans.lj-iosevka-etoile.widths.normal]
+[buildPlans.lj-iosevka-etoile.widths.semi-condensed]
 shape = 500
 menu = 5
+css = "semi-condensed"
+
+[buildPlans.lj-iosevka-etoile.widths.normal]
+shape = 547
+menu = 6
 css = "normal"
 
 [buildPlans.lj-iosevka-etoile.widths.semi-extended]
-shape = 547
-menu = 6
+shape = 600
+menu = 7
 css = "semi-expanded"
 
 [buildPlans.lj-iosevka-etoile.widths.extended]
-shape = 600
-menu = 7
+shape = 657
+menu = 8
 css = "expanded"
 
 [buildPlans.lj-iosevka-etoile.widths.extra-extended]
-shape = 657
-menu = 8
+shape = 720
+menu = 9
 css = "extra-expanded"
 
