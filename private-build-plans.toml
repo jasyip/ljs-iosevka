@@ -202,45 +202,30 @@ css = "expanded"
 
 
 
-[buildPlans.iosevka-etoile]
-family  = "Iosevka Etoile"
-desc = "Slab-serif"
-spacing = "quasi-proportional"
-serifs = 'slab'
-snapshotFamily = 'Iosevka Etoile'
+[buildPlans.iosevka]
+family = "Iosevka"
+desc = "Default"
+snapshotFamily = 'Iosevka'
 snapshotFeature = {"NWID" = 0}
 export-glyph-names = true
 
-[buildPlans.iosevka-etoile.variants.design]
-at = 'fourfold'
-capital-w = 'straight-flat-top'
-f = "flat-hook-serifed"
-j = 'flat-hook-serifed'
-t = "flat-hook"
-w = 'straight-flat-top'
-
-[buildPlans.iosevka-etoile.variants.italic]
-f = "flat-hook-tailed"
-
-
-
-[buildPlans.iosevka-etoile.widths.semi-condensed]
-shape = 547
+[buildPlans.iosevka.widths.semi-condensed]
+shape = 456
 menu = 4
 css = "semi-condensed"
 
-[buildPlans.iosevka-etoile.widths.normal]
-shape = 600
+[buildPlans.iosevka.widths.normal]
+shape = 500
 menu = 5
 css = "normal"
 
-[buildPlans.iosevka-etoile.widths.semi-extended]
-shape = 657
+[buildPlans.iosevka.widths.semi-extended]
+shape = 547
 menu = 6
 css = "semi-expanded"
 
-[buildPlans.iosevka-etoile.widths.extended]
-shape = 720
+[buildPlans.iosevka.widths.extended]
+shape = 600
 menu = 7
 css = "expanded"
 
