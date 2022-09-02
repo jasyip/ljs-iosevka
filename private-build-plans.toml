@@ -87,15 +87,101 @@ shape = 657
 menu = 8
 css = "extra-expanded"
 
-[buildPlans.lj-iosevka-term.widths.ultra-extended]
+
+
+
+
+
+
+
+[buildPlans.lj-iosevka-aile]
+family = "LJ's Iosevka Aile"
+spacing = "quasi-proportional"
+serifs = "sans"
+no-cv-ss = false
+export-glyph-names = true
+
+
+[buildPlans.lj-iosevka-aile.variants.design]
+capital-d = "more-rounded-serifless"
+capital-g = "toothless-rounded-serifless-hooked"
+capital-h = "top-left-bottom-right-serifed"
+capital-i = "serifed"
+capital-j = "serifed"
+capital-k = "straight-serifless"
+capital-l = "motion-serifed"
+capital-m = "hanging-motion-serifed"
+capital-n = "motion-serifed"
+capital-p = "closed"
+capital-q = "crossing"
+capital-r = "straight"
+capital-t = "serifless"
+capital-u = "toothless-rounded-unilateral-motion-serifed"
+capital-v = "straight"
+capital-w = "straight"
+capital-x = "straight-serifless"
+a = "double-storey-serifless"
+d = "toothed-serifless"
+f = "serifless"
+g = "double-storey"
+i = "tailed-serifed"
+j = "serifed"
+l = "tailed-serifed"
+m = "short-leg"
+p = "eared"
+q = "earless-corner-diagonal-tailed"
+u = "tailed"
+x = "straight-serifless"
+y = "cursive-flat-hook"
+z = "straight-serifless"
+zero = "slashed"
+one = "base-flat-top-serif"
+five = "vertical-upper-left-bar"
+six = "straight-bar"
+seven = "straight-serifless"
+eight = "crossing"
+nine = "open-contour"
+tilde = "low"
+asterisk = "hex-high"
+underscore = "above-baseline"
+caret = "medium"
+paren = "normal"
+brace = "curly-flat-boundary"
+ampersand = "et-toothed"
+at = "threefold-tall"
+dollar = "through"
+percent = "rings-continuous-slash"
+bar = "force-upright"
+ascii-single-quote = "straight"
+ascii-grave = "straight"
+question = "smooth"
+punctuation-dot = "round"
+
+
+[buildPlans.lj-iosevka-aile.ligations]
+enables = ["kern-dotty", "kern-bars"]
+
+
+
+[buildPlans.lj-iosevka-aile.widths.semi-condensed]
+shape = 547
+menu = 4
+css = "semi-condensed"
+
+[buildPlans.lj-iosevka-aile.widths.normal]
+shape = 600
+menu = 5
+css = "normal"
+
+[buildPlans.lj-iosevka-aile.widths.semi-extended]
+shape = 657
+menu = 6
+css = "semi-expanded"
+
+[buildPlans.lj-iosevka-aile.widths.extended]
 shape = 720
-menu = 9
-css = "ultra-expanded"
-
-
-
-
-
+menu = 7
+css = "expanded"
 
 
 
@@ -200,126 +286,3 @@ css = "expanded"
 
 
 
-
-
-[buildPlans.iosevka]
-family = "Iosevka"
-desc = "Default"
-snapshotFamily = 'Iosevka'
-snapshotFeature = {"NWID" = 0}
-export-glyph-names = true
-
-[buildPlans.iosevka.widths.semi-condensed]
-shape = 456
-menu = 4
-css = "semi-condensed"
-
-[buildPlans.iosevka.widths.normal]
-shape = 500
-menu = 5
-css = "normal"
-
-[buildPlans.iosevka.widths.semi-extended]
-shape = 547
-menu = 6
-css = "semi-expanded"
-
-[buildPlans.iosevka.widths.extended]
-shape = 600
-menu = 7
-css = "expanded"
-
-
-
-
-[buildPlans.iosevka-aile]
-family  = "Iosevka Aile"
-desc = "Sans-serif"
-spacing = "quasi-proportional"
-snapshotFamily = 'Iosevka Aile'
-snapshotFeature = {"NWID" = 0}
-export-glyph-names = true
-
-[buildPlans.iosevka-aile.variants.design]
-capital-i = "serifless"
-capital-j = "serifless"
-capital-k = "straight-serifless"
-capital-m = "flat-bottom"
-capital-w = "straight-flat-top"
-a = "double-storey-serifless"
-d = "toothed-serifless"
-e = "flat-crossbar"
-f = "flat-hook"
-g = "single-storey-serifless"
-i = "serifless"
-j = "flat-hook-serifless"
-k = "straight-serifless"
-l = "serifless"
-r = "compact"
-t = "flat-hook"
-u = "toothed"
-w = "straight-flat-top"
-y = "straight"
-long-s = "flat-hook"
-eszet = "longs-s-lig"
-lower-iota = "flat-tailed"
-lower-lambda = "straight-turn"
-cyrl-ef = "serifless"
-cyrl-capital-ka = "symmetric-connected-serifless"
-cyrl-ka = "symmetric-connected-serifless"
-cyrl-capital-u = "straight"
-at = "fourfold"
-percent = "rings-continuous-slash"
-
-# Letterform control for U+1D670 ... U+1D6A3
-[buildPlans.iosevka-aile.derivingVariants.mathtt.design]
-capital-i = "serifed"
-capital-j = "serifless"
-capital-k = "straight-serifless"
-capital-m = "flat-bottom"
-capital-w = "straight-flat-top"
-a = "double-storey-serifless"
-d = "toothed-serifless"
-e = "flat-crossbar"
-f = "flat-hook"
-g = "single-storey-serifless"
-i = "serifed"
-j = "flat-hook-serifed"
-k = "straight-serifless"
-l = "serifed"
-r = "compact"
-t = "flat-hook"
-u = "toothed"
-w = "straight-flat-top"
-y = "straight"
-long-s = "flat-hook"
-eszet = "longs-s-lig"
-lower-iota = "flat-tailed"
-lower-lambda = "straight-turn"
-cyrl-ef = "serifless"
-cyrl-capital-ka = "symmetric-connected-serifless"
-cyrl-ka = "symmetric-connected-serifless"
-cyrl-capital-u = "straight"
-at = "fourfold"
-percent = "rings-continuous-slash"
-
-
-[buildPlans.iosevka-aile.widths.semi-condensed]
-shape = 547
-menu = 4
-css = "semi-condensed"
-
-[buildPlans.iosevka-aile.widths.normal]
-shape = 600
-menu = 5
-css = "normal"
-
-[buildPlans.iosevka-aile.widths.semi-extended]
-shape = 657
-menu = 6
-css = "semi-expanded"
-
-[buildPlans.iosevka-aile.widths.extended]
-shape = 720
-menu = 7
-css = "expanded"

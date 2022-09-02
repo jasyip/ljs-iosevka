@@ -59,7 +59,7 @@ jobs:
           retention-days: 90
 
     strategy:
-      max-parallel: 1
+      # max-parallel: 1
       matrix:
-        font-name: ["lj-iosevka-term", "lj-iosevka-etoile", "iosevka-etoile", "iosevka-aile"]
+        font-name: ["lj-iosevka-term", "lj-iosevka-aile", "lj-iosevka-etoile"]
 
