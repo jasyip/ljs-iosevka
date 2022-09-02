@@ -175,6 +175,11 @@ enables = ["arrow", "kern-dotty", "kern-bars", "lteq-as-arrow"]
 
 
 
+[buildPlans.lj-iosevka-etoile.widths.semi-condensed]
+shape = 547
+menu = 4
+css = "semi-condensed"
+
 [buildPlans.lj-iosevka-etoile.widths.normal]
 shape = 600
 menu = 5
@@ -218,6 +223,11 @@ w = 'straight-flat-top'
 f = "flat-hook-tailed"
 
 
+
+[buildPlans.iosevka-etoile.widths.semi-condensed]
+shape = 547
+menu = 4
+css = "semi-condensed"
 
 [buildPlans.iosevka-etoile.widths.normal]
 shape = 600
@@ -308,6 +318,11 @@ cyrl-capital-u = "straight"
 at = "fourfold"
 percent = "rings-continuous-slash"
 
+
+[buildPlans.iosevka-aile.widths.semi-condensed]
+shape = 547
+menu = 4
+css = "semi-condensed"
 
 [buildPlans.iosevka-aile.widths.normal]
 shape = 600
