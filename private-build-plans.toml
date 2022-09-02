@@ -219,6 +219,11 @@ f = "flat-hook-tailed"
 
 
 
+[buildPlans.iosevka-etoile.widths.normal]
+shape = 600
+menu = 5
+css = "normal"
+
 [buildPlans.iosevka-etoile.widths.semi-extended]
 shape = 657
 menu = 6
@@ -303,6 +308,11 @@ cyrl-capital-u = "straight"
 at = "fourfold"
 percent = "rings-continuous-slash"
 
+
+[buildPlans.iosevka-aile.widths.normal]
+shape = 600
+menu = 5
+css = "normal"
 
 [buildPlans.iosevka-aile.widths.semi-extended]
 shape = 657
