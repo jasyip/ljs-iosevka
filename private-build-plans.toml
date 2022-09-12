@@ -63,7 +63,15 @@ punctuation-dot = "round"
 
 
 [buildPlans.lj-iosevka-term.ligations]
-enables = ["kern-dotty", "kern-bars"]
+enables = [
+    "ltgt-diamond-tag",
+    "ltgt-slash-tag",
+    "plusplus",
+    "kern-dotty",
+    "kern-bars",
+    "llgg",
+    "llggeq",
+]
 
 
 
@@ -164,7 +172,21 @@ punctuation-dot = "round"
 
 
 [buildPlans.lj-iosevka-aile.ligations]
-enables = ["kern-dotty", "kern-bars"]
+enables = [
+    "arrow",
+    "trig",
+    "tildeeq",
+    "slasheq",
+    "ltgt-diamond",
+    "ltgt-slash-tag",
+    "kern-dotty",
+    "kern-bars",
+    "logic",
+    "lteq-as-arrow",
+    "gteq-as-arrow",
+    "brace-bar",
+    "brack-bar",
+]
 
 
 
@@ -267,7 +289,21 @@ punctuation-dot = "round"
 f = "flat-hook-tailed"
 
 [buildPlans.lj-iosevka-etoile.ligations]
-enables = ["arrow", "kern-dotty", "kern-bars", "lteq-as-arrow"]
+enables = [
+    "arrow",
+    "trig",
+    "tildeeq",
+    "slasheq",
+    "ltgt-diamond",
+    "ltgt-slash-tag",
+    "kern-dotty",
+    "kern-bars",
+    "logic",
+    "lteq-as-arrow",
+    "gteq-as-arrow",
+    "brace-bar",
+    "brack-bar",
+]
 
 
 
