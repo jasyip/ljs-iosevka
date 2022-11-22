@@ -67,6 +67,7 @@ enables = [
     "ltgt-diamond-tag",
     "ltgt-slash-tag",
     "plusplus",
+    "slash-asterisk",
     "kern-dotty",
     "kern-bars",
     "llgg",
