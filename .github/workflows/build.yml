@@ -14,11 +14,12 @@ jobs:
         with:
           node-version: latest
 
-      - name: Setup PNPM
+      - name: Install PNPM
         uses: pnpm/action-setup@v2
         id: pnpm-install
         with:
           version: latest
+          run_install: false
 
       - name: Configure PNPM settings
         run: |
@@ -26,13 +27,14 @@ jobs:
 
       - name: Get pnpm store directory
         id: pnpm-cache
+        shell: bash
         run: |
-          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+          echo "STORE_PATH=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - name: Setup pnpm cache
         uses: actions/cache@v3
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          path: ${{ steps.pnpm-cache.outputs.STORE_PATH }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
