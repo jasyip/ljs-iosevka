@@ -2,8 +2,7 @@ name: build fonts
 on: [push]
 jobs:
   build:
-    if: github.ref == 'refs/heads/point-release'
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
