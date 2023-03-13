@@ -62,5 +62,5 @@ jobs:
     strategy:
       # max-parallel: 1
       matrix:
-        font-name: ["lj-iosevka-term", "lj-iosevka-aile", "lj-iosevka-etoile"]
+        font-name: ["lj-iosevka-term", "lj-iosevka-fcmono", "lj-iosevka-aile", "lj-iosevka-etoile"]
 
