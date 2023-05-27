@@ -65,14 +65,11 @@ lig-single-arrow-bar = "with-notch"
 [buildPlans.lj-iosevka-term.ligations]
 enables = [
     "ltgt-diamond-tag",
-    "ltgt-slash-tag",
     "plusplus",
-    "slash-asterisk",
     "kern-dotty",
     "kern-bars",
     "llgg",
     "llggeq",
-    "html-comment",
 ]
 
 
@@ -172,14 +169,11 @@ lig-single-arrow-bar = "with-notch"
 [buildPlans.lj-iosevka-fcmono.ligations]
 enables = [
     "ltgt-diamond-tag",
-    "ltgt-slash-tag",
     "plusplus",
-    "slash-asterisk",
     "kern-dotty",
     "kern-bars",
     "llgg",
     "llggeq",
-    "html-comment",
 ]
 
 
@@ -233,7 +227,7 @@ i = "serifed-flat-tailed"
 l = "serifed-flat-tailed"
 m = "short-leg-serifless"
 q = "diagonal-tailed-serifless"
-y = "cursive-serifless"
+y = "cursive-flat-hook-serifless"
 long-s = "bent-hook-tailed"
 eszet = "sulzbacher-tailed"
 lower-delta = "flat-top"
@@ -322,7 +316,9 @@ no-cv-ss = false
 export-glyph-names = true
 
 [buildPlans.lj-iosevka-etoile.variants.design]
+capital-a = "straight-tri-serifed"
 capital-d = "more-rounded-bilateral-serifed"
+capital-j = "serifed-both-sides"
 capital-q = "crossing-baseline"
 d = "tailed-serifed"
 g = "double-storey"
@@ -330,6 +326,7 @@ i = "serifed-flat-tailed"
 l = "serifed-flat-tailed"
 m = "short-leg-serifed"
 q = "diagonal-tailed-motion-serifed"
+u = "tailed-serifed"
 y = "cursive-flat-hook-serifed"
 long-s = "bent-hook-tailed"
 eszet = "sulzbacher-tailed"
