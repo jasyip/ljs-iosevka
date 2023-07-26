@@ -419,20 +419,16 @@ css = "extra-expanded"
 
 
 
-[weights.thin]
-shape = 100
-menu  = 100
-css   = 100
-
-[weights.extralight]
-shape = 200
-menu  = 200
-css   = 200
 
 [weights.light]
 shape = 300
 menu  = 300
 css   = 300
+
+[weights.semilight]
+shape = 350
+menu  = 350
+css   = 350
 
 [weights.regular]
 shape = 400
@@ -458,13 +454,3 @@ css   = 600
 shape = 700
 menu  = 700
 css   = 700
-
-[weights.extrabold]
-shape = 800
-menu  = 800
-css   = 800
-
-[weights.heavy]
-shape = 900
-menu  = 900
-css   = 900
