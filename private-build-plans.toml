@@ -307,10 +307,6 @@ enables = [
 
 
 
-[buildPlans.lj-iosevka-aile.widths.condensed]
-shape = 456
-menu = 4
-css = "condensed"
 
 [buildPlans.lj-iosevka-aile.widths.semi-condensed]
 shape = 500
@@ -408,10 +404,6 @@ enables = [
 
 
 
-[buildPlans.lj-iosevka-etoile.widths.condensed]
-shape = 456
-menu = 4
-css = "condensed"
 
 [buildPlans.lj-iosevka-etoile.widths.semi-condensed]
 shape = 500
