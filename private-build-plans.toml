@@ -86,29 +86,34 @@ enables = [
 
 
 
-[buildPlans.lj-iosevka-term.widths.condensed]
+[buildPlans.lj-iosevka-term.widths.extra-condensed]
 shape = 456
 menu = 4
+css = "extra-condensed"
+
+[buildPlans.lj-iosevka-term.widths.condensed]
+shape = 500
+menu = 5
 css = "condensed"
 
 [buildPlans.lj-iosevka-term.widths.semi-condensed]
-shape = 500
-menu = 5
+shape = 547
+menu = 6
 css = "semi-condensed"
 
 [buildPlans.lj-iosevka-term.widths.normal]
-shape = 547
-menu = 6
+shape = 600
+menu = 7
 css = "normal"
 
 [buildPlans.lj-iosevka-term.widths.semi-extended]
-shape = 600
-menu = 7
+shape = 657
+menu = 8
 css = "semi-expanded"
 
 [buildPlans.lj-iosevka-term.widths.extended]
-shape = 657
-menu = 8
+shape = 720
+menu = 9
 css = "expanded"
 
 
@@ -201,29 +206,34 @@ enables = [
 
 
 
-[buildPlans.lj-iosevka-fcmono.widths.condensed]
+[buildPlans.lj-iosevka-fcmono.widths.extra-condensed]
 shape = 456
 menu = 4
+css = "extra-condensed"
+
+[buildPlans.lj-iosevka-fcmono.widths.condensed]
+shape = 500
+menu = 5
 css = "condensed"
 
 [buildPlans.lj-iosevka-fcmono.widths.semi-condensed]
-shape = 500
-menu = 5
+shape = 547
+menu = 6
 css = "semi-condensed"
 
 [buildPlans.lj-iosevka-fcmono.widths.normal]
-shape = 547
-menu = 6
+shape = 600
+menu = 7
 css = "normal"
 
 [buildPlans.lj-iosevka-fcmono.widths.semi-extended]
-shape = 600
-menu = 7
+shape = 657
+menu = 8
 css = "semi-expanded"
 
 [buildPlans.lj-iosevka-fcmono.widths.extended]
-shape = 657
-menu = 8
+shape = 720
+menu = 9
 css = "expanded"
 
 
@@ -322,6 +332,10 @@ shape = 657
 menu = 8
 css = "expanded"
 
+[buildPlans.lj-iosevka-aile.widths.extra-extended]
+shape = 720
+menu = 9
+css = "extra-expanded"
 
 
 
@@ -418,3 +432,8 @@ css = "semi-expanded"
 shape = 657
 menu = 8
 css = "expanded"
+
+[buildPlans.lj-iosevka-etoile.widths.extra-extended]
+shape = 720
+menu = 9
+css = "extra-expanded"
