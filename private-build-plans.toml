@@ -86,11 +86,6 @@ enables = [
 
 
 
-[buildPlans.lj-iosevka-term.widths.ultra-condensed]
-shape = 456
-menu = 4
-css = "ultra-condensed"
-
 [buildPlans.lj-iosevka-term.widths.extra-condensed]
 shape = 500
 menu = 5
@@ -206,11 +201,6 @@ enables = [
 
 
 
-[buildPlans.lj-iosevka-fcmono.widths.ultra-condensed]
-shape = 456
-menu = 4
-css = "ultra-condensed"
-
 [buildPlans.lj-iosevka-fcmono.widths.extra-condensed]
 shape = 500
 menu = 5
@@ -305,14 +295,6 @@ enables = [
     "brack-bar",
 ]
 
-[buildPlans.lj-iosevka-aile.exclude-chars]
-ranges = [[43834, 43834]]
-
-
-[buildPlans.lj-iosevka-aile.widths.semi-condensed]
-shape = 456
-menu = 4
-css = "semi-condensed"
 
 [buildPlans.lj-iosevka-aile.widths.normal]
 shape = 500
@@ -409,11 +391,6 @@ enables = [
 
 
 
-
-[buildPlans.lj-iosevka-etoile.widths.semi-condensed]
-shape = 456
-menu = 4
-css = "semi-condensed"
 
 [buildPlans.lj-iosevka-etoile.widths.normal]
 shape = 500
