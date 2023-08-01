@@ -305,7 +305,8 @@ enables = [
     "brack-bar",
 ]
 
-
+[buildPlans.lj-iosevka-aile.exclude-chars]
+ranges = [[43834, 43834]]
 
 
 [buildPlans.lj-iosevka-aile.widths.semi-condensed]
@@ -327,6 +328,11 @@ css = "semi-expanded"
 shape = 600
 menu = 7
 css = "expanded"
+
+[buildPlans.lj-iosevka-aile.widths.extra-extended]
+shape = 657
+menu = 7
+css = "extra-expanded"
 
 [buildPlans.lj-iosevka-aile.widths.ultra-extended]
 shape = 720
@@ -423,6 +429,11 @@ css = "semi-expanded"
 shape = 600
 menu = 7
 css = "expanded"
+
+[buildPlans.lj-iosevka-etoile.widths.extra-extended]
+shape = 657
+menu = 7
+css = "extra-expanded"
 
 [buildPlans.lj-iosevka-etoile.widths.ultra-extended]
 shape = 720
