@@ -315,7 +315,7 @@ css = "expanded"
 
 [buildPlans.lj-iosevka-aile.widths.extra-extended]
 shape = 657
-menu = 7
+menu = 8
 css = "extra-expanded"
 
 [buildPlans.lj-iosevka-aile.widths.ultra-extended]
@@ -412,7 +412,7 @@ css = "expanded"
 
 [buildPlans.lj-iosevka-etoile.widths.extra-extended]
 shape = 657
-menu = 7
+menu = 8
 css = "extra-expanded"
 
 [buildPlans.lj-iosevka-etoile.widths.ultra-extended]
