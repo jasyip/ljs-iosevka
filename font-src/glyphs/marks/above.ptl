@@ -84,18 +84,22 @@ glyph-block Mark-Above : begin
 
 		create-glyph "elipsisAbove.\(suffix)" : glyph-proc
 			set-width 0
-			include : StdAnchors.impl 'above' 0 1.5
-			include : DrawAt (markMiddle - markExtend * 1.5) aboveMarkMid (markDotsRadius * kdr)
-			include : DrawAt  markMiddle                     aboveMarkMid (markDotsRadius * kdr)
-			include : DrawAt (markMiddle + markExtend * 1.5) aboveMarkMid (markDotsRadius * kdr)
+			include : StdAnchors.wide
+			local fine : Math.min (markDotsRadius * kdr) (markExtend * 0.375)
+			local coFine : markExtend * 1.5 - fine
+			include : DrawAt (markMiddle - coFine) aboveMarkMid fine
+			include : DrawAt  markMiddle           aboveMarkMid fine
+			include : DrawAt (markMiddle + coFine) aboveMarkMid fine
 
 		create-glyph "fourDotsAbove.\(suffix)" : glyph-proc
 			set-width 0
-			include : StdAnchors.impl 'above' 0 2
-			include : DrawAt (markMiddle - markExtend * 2)     aboveMarkMid (markDotsRadius * kdr)
-			include : DrawAt (markMiddle - markExtend * 2 / 3) aboveMarkMid (markDotsRadius * kdr)
-			include : DrawAt (markMiddle + markExtend * 2 / 3) aboveMarkMid (markDotsRadius * kdr)
-			include : DrawAt (markMiddle + markExtend * 2)     aboveMarkMid (markDotsRadius * kdr)
+			include : StdAnchors.extraWide
+			local fine : Math.min (markDotsRadius * kdr) (markExtend * 0.3125)
+			local coFine : markExtend * 2 - fine
+			include : DrawAt (markMiddle - coFine)     aboveMarkMid fine
+			include : DrawAt (markMiddle - coFine / 3) aboveMarkMid fine
+			include : DrawAt (markMiddle + coFine / 3) aboveMarkMid fine
+			include : DrawAt (markMiddle + coFine)     aboveMarkMid fine
 
 	select-variant 'dotAbove'             0x307 (follow -- 'diacriticDot')
 	select-variant 'dieresisAbove'        0x308 (follow -- 'diacriticDot')
@@ -148,8 +152,7 @@ glyph-block Mark-Above : begin
 			curl (markMiddle - 0.875 * markExtend) aboveMarkTop [widths.center : 2 * markStress]
 
 	create-glyph 'asciiGrave/body/straight' : glyph-proc
-		local df : DivFrame para.diversityF
-		set-width df.width
+		local df : include : DivFrame para.diversityF
 		include : dispiro
 			flat (df.middle + HalfStroke * 1.1 * asciiMarkZoomX * [Math.sqrt df.div]) [mix aboveMarkMid aboveMarkBot asciiMarkZoomY] [widths.center : Stroke * 0.9]
 			curl (df.middle - markExtend * asciiMarkZoomX * [Math.sqrt df.div]) [mix aboveMarkMid aboveMarkTop asciiMarkZoomY] [widths.center : Stroke * 1.1]
@@ -162,8 +165,7 @@ glyph-block Mark-Above : begin
 			curl (markMiddle + 0.875 * markExtend) aboveMarkTop [widths.center : 2 * markStress]
 
 	create-glyph 'latin1acute' 0xB4 : glyph-proc
-		local df : DivFrame para.diversityF
-		set-width df.width
+		local df : include : DivFrame para.diversityF
 		include : dispiro
 			flat (df.middle - HalfStroke * 1.1 * asciiMarkZoomX * [Math.sqrt df.div]) [mix aboveMarkMid aboveMarkBot asciiMarkZoomY] [widths.center : Stroke * 0.9]
 			curl (df.middle + markExtend * asciiMarkZoomX * [Math.sqrt df.div]) [mix aboveMarkMid aboveMarkTop asciiMarkZoomY] [widths.center : Stroke * 1.1]
@@ -1064,6 +1066,12 @@ glyph-block Mark-Above : begin
 		include : StdAnchors.mediumWide
 
 		include : VBar.m markMiddle aboveMarkBot aboveMarkTop (markFine * 2)
+		include : HBar.m (markMiddle - markExtend) (markMiddle + markExtend) aboveMarkMid (markFine * 2)
+
+	create-glyph 'minusAbove' : glyph-proc
+		set-width 0
+		include : StdAnchors.mediumWide
+
 		include : HBar.m (markMiddle - markExtend) (markMiddle + markExtend) aboveMarkMid (markFine * 2)
 
 	create-glyph 'dblPlusAbove' 0x1AC9 : glyph-proc

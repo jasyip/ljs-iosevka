@@ -48,6 +48,10 @@ glyph-block Letter-Latin-C : begin
 				arcvh
 				g4 (df.middle + CorrectionOMidX * sw) (bot + O + offset)
 				g4 (df.rightSB - offset) (bot + DToothlessRise)
+			[Just FLAT-CONNECTION] : list
+				arcvh
+				flat (df.middle + CorrectionOMidX * sw) (bot + O + offset)
+				curl (df.rightSB - offset) (bot + O + offset)
 			_ : list
 				hookend (bot + O + offset)
 				g4 (df.rightSB - offset) (bot + [fallback hook Hook])
@@ -77,6 +81,10 @@ glyph-block Letter-Latin-C : begin
 				arcvh
 				g4 (df.middle + CorrectionOMidX * sw) (bot + O + offset)
 				g4 (df.leftSB + offset) (bot + DToothlessRise)
+			[Just FLAT-CONNECTION] : list
+				arcvh
+				flat (df.middle + CorrectionOMidX * sw) (bot + O + offset)
+				curl (df.leftSB + offset) (bot + O + offset)
 			_ : list
 				hookend (bot + O + offset)
 				g4 (df.leftSB + offset) (bot + [fallback hook Hook])
@@ -197,8 +205,7 @@ glyph-block Letter-Latin-C : begin
 				include : Translate 0 (SB / 2)
 
 		create-glyph "cyrl/esWide.\(suffix)" : glyph-proc
-			local df : DivFrame para.diversityM 3
-			set-width df.width
+			local df : include : DivFrame para.diversityM 3
 			include : df.markSet.e
 			local desc : -LongJut + 0.5 * Stroke
 			include : ExtendBelowBaseAnchors desc
