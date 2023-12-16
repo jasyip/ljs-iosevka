@@ -2,8 +2,8 @@
 family = "LJ's Iosevka Term"
 spacing = "term"
 serifs = "sans"
-no-cv-ss = false
-export-glyph-names = true
+noCvSss = false
+exportGlyphNames = true
 
 
 [buildPlans.lj-iosevka-term.variants.design]
@@ -77,12 +77,16 @@ lig-single-arrow-bar = "with-notch"
 
 [buildPlans.lj-iosevka-term.ligations]
 enables = [
+    "center-op-trigger-equal-l"
     "ltgt-diamond-tag",
-    "plusplus",
     "kern-dotty",
     "kern-bars",
+    "slash-asterisk",
     "llgg",
     "llggeq",
+    "tilde-tilde",
+    "plus-plus",
+    "hash-hash",
 ]
 
 
@@ -119,8 +123,8 @@ css = "semi-expanded"
 family = "LJ's Iosevka FontConfig Mono"
 spacing = "fontconfig-mono"
 serifs = "sans"
-no-cv-ss = false
-export-glyph-names = true
+noCvSss = false
+exportGlyphNames = true
 
 
 [buildPlans.lj-iosevka-fcmono.variants.design]
@@ -193,12 +197,16 @@ lig-single-arrow-bar = "with-notch"
 
 [buildPlans.lj-iosevka-fcmono.ligations]
 enables = [
+    "center-op-trigger-equal-l"
     "ltgt-diamond-tag",
-    "plusplus",
     "kern-dotty",
     "kern-bars",
+    "slash-asterisk",
     "llgg",
     "llggeq",
+    "tilde-tilde",
+    "plus-plus",
+    "hash-hash",
 ]
 
 
@@ -239,8 +247,8 @@ css = "semi-expanded"
 family = "LJ's Iosevka Aile"
 spacing = "quasi-proportional"
 serifs = "sans"
-no-cv-ss = false
-export-glyph-names = true
+noCvSss = false
+exportGlyphNames = true
 
 
 [buildPlans.lj-iosevka-aile.variants.design]
@@ -283,10 +291,12 @@ lig-single-arrow-bar = "with-notch"
 enables = [
     "arrow-l",
     "arrow-r",
+    "arrow-lr",
     "counter-arrow-l",
     "counter-arrow-r",
     "trig",
-    "tildeeq",
+    "eqeqeq",
+    "eqslasheq",
     "ltgt-diamond-tag",
     "kern-dotty",
     "kern-bars",
@@ -295,6 +305,11 @@ enables = [
     "llggeq",
     "brace-bar",
     "brack-bar",
+    "tilde-tilde",
+    "minus-minus-minus",
+    "plus-plus",
+    "underscore-underscore",
+    "hash-hash",
 ]
 
 
@@ -334,8 +349,8 @@ css = "ultra-expanded"
 family = "LJ's Iosevka Etoile"
 spacing = "quasi-proportional"
 serifs = "slab"
-no-cv-ss = false
-export-glyph-names = true
+noCvSss = false
+exportGlyphNames = true
 
 [buildPlans.lj-iosevka-etoile.variants.design]
 capital-a = "straight-tri-serifed"
@@ -378,10 +393,12 @@ lig-single-arrow-bar = "with-notch"
 enables = [
     "arrow-l",
     "arrow-r",
+    "arrow-lr",
     "counter-arrow-l",
     "counter-arrow-r",
     "trig",
-    "tildeeq",
+    "eqeqeq",
+    "eqslasheq",
     "ltgt-diamond-tag",
     "kern-dotty",
     "kern-bars",
@@ -390,7 +407,13 @@ enables = [
     "llggeq",
     "brace-bar",
     "brack-bar",
+    "tilde-tilde",
+    "minus-minus-minus",
+    "plus-plus",
+    "underscore-underscore",
+    "hash-hash",
 ]
+
 
 
 
