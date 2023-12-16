@@ -45,7 +45,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
 
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile --prefer-offline
+        run: pnpm install --prefer-offline
 
 
       - name: Install ttfautohint
