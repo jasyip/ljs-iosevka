@@ -48,7 +48,7 @@ jobs:
 
       - name: Install dependencies
         shell: sh
-        run: pnpm install --prefer-offline
+        run: pnpm install
 
 
       - name: Install ttfautohint
