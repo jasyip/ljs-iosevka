@@ -1,5 +1,38 @@
 ## Modifications since last major version
 
+### 28.0.3
+
+* Add characters:
+  - COMBINING SUSPENSION MARK (`U+1DC3`).
+  - FROWN (`U+2322`).
+  - SMILE (`U+2323`).
+  - CIRCLE WITH HORIZONTAL BAR (`U+29B5`).
+  - LATIN CAPITAL LETTER P WITH STROKE THROUGH DESCENDER (`U+A750`) (#1797).
+  - LATIN SMALL LETTER P WITH STROKE THROUGH DESCENDER (`U+A751`) (#1797).
+* Remove tailless variants for Latin Iota (`U+0196`, `U+0269`) and Cyrillic Iota (`U+A646`, `U+A647`).
+* Fix slash ligations when `frac` feature is enabled (#2130).
+* Fix leaning marks of turned `r` (#2133).
+
+
+### 28.0.2
+
+* Add characters:
+  - LATIN CAPITAL LETTER AU (`U+A736`) (#1689).
+  - LATIN SMALL LETTER AU (`U+A737`) (#1689).
+* Refine shape of Tshe and Cyrillic Capital Letter Te with Middle Hook (`U+A68A`) (#2123).
+* Remove bottom serif of Cyrillic Small Letter Ghe with Middle Hook (`U+0495`) under italics.
+* Make serif variants of Cyrillic Small Letter Tall Te (`U+1C84`) respond to italics.
+* Make terminal serif behavior of palatalized Komi consonants (`U+0502`...`U+0505`, `U+0508`...`U+050F`) more consistent with each other.
+* Refine serifs of Turned M (`U+019C`, `U+026F`, `U+0270`, `U+1D1F`, `U+1D5A`, `U+1DAD`), Cyrillic Sha (`U+0448`, `U+2DF2`, `U+1E046`, `U+1E064`), and Cyrillic Shcha (`U+0449`, `U+2DF3`) under monospace.
+
+
+### 28.0.1
+
+* Add italic form of CYRILLIC SMALL LETTER TE WITH MIDDLE HOOK (`U+A68B`) (#2119).
+* Add missing feature tag to chaining plus ligation (#2118).
+* Make the central part of Cyrillic Twe to follow lowercase Tau variants (#2122).
+
+
 ### 28.0.0
 
 * \[**BREAKING**\] The filenames and package filenames are changed.
