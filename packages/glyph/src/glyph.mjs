@@ -18,6 +18,7 @@ export class Glyph {
 		this.gizmo = Transform.Id();
 		// Metrics
 		this.advanceWidth = 500;
+		this.divFrameParams = null;
 		this.markAnchors = {};
 		this.baseAnchors = {};
 		// Tracking
@@ -123,14 +124,8 @@ export class Glyph {
 		if (this.ctxTag) g = new Geom.TaggedGeometry(g, this.ctxTag);
 		this.geometry = Geom.combineWith(this.geometry, g);
 	}
-	includeContours(cs, shiftX, shiftY) {
-		let parts = [];
-		for (const contour of cs) {
-			let c = [];
-			for (const z of contour) c.push(Point.translated(z, shiftX, shiftY));
-			parts.push(new Geom.ContourGeometry(c));
-		}
-		this.includeGeometry(new Geom.CombineGeometry(parts));
+	includeContours(cs) {
+		this.includeGeometry(new Geom.ContourSetGeometry(cs));
 	}
 	applyTransform(tfm, alsoAnchors) {
 		this.geometry = new Geom.TransformedGeometry(this.geometry, tfm);

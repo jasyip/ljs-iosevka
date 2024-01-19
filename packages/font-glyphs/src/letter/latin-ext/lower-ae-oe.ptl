@@ -9,6 +9,7 @@ glyph-block Letter-Latin-Lower-AE-OE : begin
 	glyph-block-import CommonShapes
 	glyph-block-import Common-Derivatives
 	glyph-block-import Mark-Adjustment : LeaningAnchor
+	glyph-block-import Letter-Shared : CreateTurnedLetter
 	glyph-block-import Letter-Shared-Shapes : nShoulder OBarLeft
 
 	glyph-block-export SubDfAndShift
@@ -133,31 +134,35 @@ glyph-block Letter-Latin-Lower-AE-OE : begin
 				include : InvEShape 1 df revbody
 
 	do "u subglyphs"
-		define [ueUPart df fSlab] : new-glyph : glyph-proc
-			local { subDf } : SubDfAndShift 0 df 0
-			local ada : subDf.archDepthA SmallArchDepth df.mvs
-			local adb : subDf.archDepthB SmallArchDepth df.mvs
+		glyph-block-import Letter-Latin-U : UShapeGroup SmallUConfigT
 
-			local abarRight : df.middle + [HSwToV : 0.5 * df.mvs]
-			include : nShoulder
-				left -- abarRight
-				right -- (df.rightSB - OX)
-				stroke -- df.mvs
-				ada -- adb
-				adb -- adb
-			include : FlipAround df.middle (XH / 2)
-			if fSlab : include : HSerif.lt df.leftSB XH SideJut
+		define df : DivFrame para.diversityM 3
+		define { subDf shift } : SubDfAndShift 1 df 0
+		local ada : subDf.archDepthA SmallArchDepth df.mvs
+		local adb : subDf.archDepthB SmallArchDepth df.mvs
+		define sg : UShapeGroup ada adb
 
-		define Config : object
-			"serifed"          { true   }
-			"serifless"        { false  }
-
-		foreach { suffix { fSlab } } [Object.entries Config] : do
+		foreach { suffix { Base Slabs } } [Object.entries : SmallUConfigT sg] : do
 			create-glyph "ue/u.\(suffix)" : glyph-proc
-				local df : include : DivFrame para.diversityM 3
+				include df
 				include : df.markSet.e
 				set-base-anchor 'cvDecompose' 0 0
-				include : ueUPart df fSlab
+				include : Base subDf XH df.mvs
+				include : Slabs subDf XH
+
+				eject-contour 'strokeR'
+				eject-contour 'serifRT'
+				eject-contour 'serifRB'
+
+			create-glyph "au/u.\(suffix)" : glyph-proc
+				set-width 0
+				set-mark-anchor 'cvDecompose' 0 0
+				include : difference
+					Base subDf XH df.mvs
+					intersection [MaskLeft subDf.middle] [MaskAbove (XH - adb)]
+				include : Slabs subDf XH
+				include : ApparentTranslate shift 0
+				eject-contour 'serifLT'
 
 	do "c subglyphs"
 		glyph-block-import Letter-Latin-C : CLetterForm CConfig
@@ -225,7 +230,7 @@ glyph-block Letter-Latin-Lower-AE-OE : begin
 
 		# p
 		glyph-block-import Letter-Latin-Lower-P : PConfig
-		foreach { suffix { Body {Serifs doBS} }} [Object.entries PConfig] : do
+		foreach { suffix { Body {Serifs doTS doBS} }} [Object.entries PConfig] : do
 			create-glyph "cyrl/rha/left.\(suffix)" : glyph-proc
 				local df : include : DivFrame para.diversityM 3
 				include : df.markSet.p
@@ -378,6 +383,7 @@ glyph-block Letter-Latin-Lower-AE-OE : begin
 	select-variant "ae/e" (follow -- 'e')
 	select-variant "aeInvE/right" (follow -- 'e')
 	select-variant "ue/u"
+	select-variant "au/u"
 	select-variant "oeOpenO/left" (follow -- 'c')
 	select-variant "cyrl/yae/left"
 	select-variant "cyrl/rha/left" (follow -- 'cyrl/er')
@@ -389,6 +395,7 @@ glyph-block Letter-Latin-Lower-AE-OE : begin
 	derive-composites 'oe' 0x153  'oe/o' 'ae/e'
 	derive-composites 'ue' 0x1D6B 'ue/u' 'ae/e'
 	derive-composites 'ao' 0xA735 'ae/a' 'ao/o'
+	derive-composites 'au' 0xA737 'ae/a' 'au/u'
 	derive-composites 'oo' 0xA74F 'oe/o' 'ao/o'
 	derive-composites 'uo' 0xAB63 'ue/u' 'ao/o'
 	derive-composites 'oeOpenO' 0xAB62 'oeOpenO/left' 'ae/e'
@@ -401,8 +408,8 @@ glyph-block Letter-Latin-Lower-AE-OE : begin
 	alias 'cyrl/ae' 0x4D5  'ae'
 	alias 'cyrl/oo' 0xA699 'oo'
 
-	turned 'turnae' 0x1D02 'ae' [DivFrame para.diversityM 3].middle (XH / 2)
-	turned 'turnoe' 0x1D14 'oe' [DivFrame para.diversityM 3].middle (XH / 2)
+	CreateTurnedLetter 'turnae' 0x1D02 'ae' HalfAdvance (XH / 2) [DivFrame para.diversityM 3]
+	CreateTurnedLetter 'turnoe' 0x1D14 'oe' HalfAdvance (XH / 2) [DivFrame para.diversityM 3]
 
 	derive-composites 'turnoeSlashO' 0xAB41 'turnoe' 'rightHalfSlashOverlay'
 	derive-composites 'turnoeBarO' 0xAB42 'turnoe' 'rightHalfBarOverlay'
