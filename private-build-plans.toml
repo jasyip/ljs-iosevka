@@ -5,6 +5,12 @@ serifs = "sans"
 noCvSss = false
 exportGlyphNames = true
 
+[buildPlans.lj-iosevka-term.namingOverride]
+copyright = 'Copyright 2015-{{currentYear}}, Renzhi Li (aka. Belleve Invis, belleve@typeof.net). Customization by Jason Yip'
+manufacturer = 'Belleve Invis (original font), Jason Yip (customization)'
+designer = 'Belleve Invis (original font), Jason Yip (customization)'
+urlVendor = 'https://github.com/jasyip/ljs-iosevka'
+
 
 [buildPlans.lj-iosevka-term.variants.design]
 capital-b = "standard-unilateral-serifed"
@@ -124,6 +130,12 @@ spacing = "fontconfig-mono"
 serifs = "sans"
 noCvSss = false
 exportGlyphNames = true
+
+[buildPlans.lj-iosevka-fcmono.namingOverride]
+copyright = 'Copyright 2015-{{currentYear}}, Renzhi Li (aka. Belleve Invis, belleve@typeof.net). Customization by Jason Yip'
+manufacturer = 'Belleve Invis (original font), Jason Yip (customization)'
+designer = 'Belleve Invis (original font), Jason Yip (customization)'
+urlVendor = 'https://github.com/jasyip/ljs-iosevka'
 
 
 [buildPlans.lj-iosevka-fcmono.variants.design]
@@ -248,6 +260,12 @@ serifs = "sans"
 noCvSss = false
 exportGlyphNames = true
 
+[buildPlans.lj-iosevka-aile.namingOverride]
+copyright = 'Copyright 2015-{{currentYear}}, Renzhi Li (aka. Belleve Invis, belleve@typeof.net). Customization by Jason Yip'
+manufacturer = 'Belleve Invis (original font), Jason Yip (customization)'
+designer = 'Belleve Invis (original font), Jason Yip (customization)'
+urlVendor = 'https://github.com/jasyip/ljs-iosevka'
+
 
 [buildPlans.lj-iosevka-aile.variants.design]
 capital-d = "more-rounded-serifless"
@@ -349,6 +367,12 @@ spacing = "quasi-proportional"
 serifs = "slab"
 noCvSss = false
 exportGlyphNames = true
+
+[buildPlans.lj-iosevka-etoile.namingOverride]
+copyright = 'Copyright 2015-{{currentYear}}, Renzhi Li (aka. Belleve Invis, belleve@typeof.net). Customization by Jason Yip'
+manufacturer = 'Belleve Invis (original font), Jason Yip (customization)'
+designer = 'Belleve Invis (original font), Jason Yip (customization)'
+urlVendor = 'https://github.com/jasyip/ljs-iosevka'
 
 [buildPlans.lj-iosevka-etoile.variants.design]
 capital-a = "straight-tri-serifed"
