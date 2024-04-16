@@ -29,12 +29,14 @@ jobs:
         run: npm run --silent build -- ttf::${{ matrix.font-name }}
 
       - name: Upload Artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: "${{ matrix.font-name }}"
           path: "dist/${{ matrix.font-name }}"
           if-no-files-found: error
           retention-days: 90
+          compression-level: 8
+
 
     strategy:
       # max-parallel: 1
