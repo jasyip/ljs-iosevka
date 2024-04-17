@@ -35,7 +35,7 @@ jobs:
           path: "dist/${{ matrix.font-name }}"
           if-no-files-found: error
           retention-days: 90
-          compression-level: 8
+          compression-level: 9
 
 
     strategy:
