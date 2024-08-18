@@ -89,7 +89,7 @@ enables = [
     "kern-bars",
     "llgg",
     "llggeq",
-    "tilde-tilde",
+    "tilde-tilde-tilde",
     "plus-plus",
     "hash-hash",
 ]
@@ -214,7 +214,7 @@ enables = [
     "kern-bars",
     "llgg",
     "llggeq",
-    "tilde-tilde",
+    "tilde-tilde-tilde",
     "plus-plus",
     "hash-hash",
 ]
