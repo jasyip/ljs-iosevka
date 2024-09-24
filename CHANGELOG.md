@@ -1,5 +1,69 @@
 ## Modifications since last major version
 
+### 31.7.1
+
+* Fix internal seams of variants of outlined letters U+1CCE6 and U+1CCEF (#2509).
+
+
+### 31.7.0
+
+* Fix Macedonian Cyrillic Gje under italics (#2493).
+* Improve widths of overline marks of Serbian italic lower Ghe/Pe/Te.
+* Remove crossbar variants for `Z`/`z` when under Polish locale (`PLK`) to avoid confusion with the handwritten `Ż`/`ż` allograph, `Ƶ`/`ƶ`.
+* Make serif variants for Latin Capital/Small Schwa (`Ə`/`ə`) only appear under Turkic (Turkish/Azerbaijani/etc.) locales (`TRK`, `AZE`, `GAG`, `KAZ`, `TAT`, `CRT`) as other languages that use Latin Schwa (including the IPA) unify its metrics with Open O (`Ɔ`/`ɔ`) or a literal Turned E (`Ǝ`/`ǝ`).
+* Make serifs of Latin Letter Small Capital I (`ɪ`) slightly wider under Quasi-Proportional.
+* Make Cyrillic Small Letter Komi Dje (`ԃ`) slightly wider under Quasi-Proportional.
+* Make serifs of Small Capital and Modifier Letter Reversed N (`ᴎ`/`ᴻ`) more accurately follow the serifs of `N`.
+* Make Som Sign (`⃀`) follow variants of capital `C`.
+* Make Latin Capital Letter Small Capital I (`Ɪ`) slightly wider under Etoile.
+* Add Characters:
+  - CYRILLIC CAPITAL LETTER TJE (`U+1C89`) ... CYRILLIC SMALL LETTER TJE (`U+1C8A`).
+  - COMPOSITION SYMBOL (`U+2384`).
+  - WHITE DIAMOND IN SQUARE (`U+26CB`).
+  - DRIVE SLOW SIGN (`U+26DA`).
+  - SQUARED SALTIRE (`U+26DD`) ... FALLING DIAGONAL IN WHITE CIRCLE IN BLACK SQUARE (`U+26DE`).
+  - HEAVY CIRCLED SALTIRE (`U+2B59`).
+  - TOP HALF LEFT PARENTHESIS (`U+2E59`) ... BOTTOM HALF RIGHT PARENTHESIS (`U+2E5C`).
+  - LATIN CAPITAL LETTER RAMS HORN (`U+A7CB`) (#2506).
+  - LATIN CAPITAL LETTER S WITH DIAGONAL STROKE (`U+A7CC`) ... LATIN SMALL LETTER S WITH DIAGONAL STROKE (`U+A7CD`).
+  - LATIN CAPITAL LETTER LAMBDA (`U+A7DA`) ... LATIN CAPITAL LETTER LAMBDA WITH STROKE (`U+A7DC`).
+  - COUNTING ROD UNIT DIGIT ONE (`U+1D360`) ... COUNTING ROD TENS DIGIT NINE (`U+1D371`).
+
+
+### 31.6.1
+
+- Fix broken accent stacking behavior for partially precomposed characters with leaning anchors (#2492).
+
+
+### 31.6.0
+
+* Add Latin localization forms for Polish and Romanian.
+* Make Combining Square Below (`U+033B`) slightly narrower.
+* Improve glyph visual for Combining Suspension Mark (`U+1DC3`).
+* Make Cyrillic Capital/Small Letter Uk (`U+0478`..`U+0479`) slightly narrower under Quasi-Proportional.
+* Make Cyrillic Capital/Small Letter Round Omega (`U+047A`..`U+047B`) slightly wider under Quasi-Proportional.
+
+
+### 31.5.0
+
+* Add characters:
+  - KAYAH LI SIGN CWI (`U+A92E`).
+  - ZERO WIDTH NON-BREAKING SPACE (`U+FEFF`).
+* Add APL form (`APLF`) for `U+25E0` and `U+25E1`, for UIUA.
+* Add Cyrillic localization forms for Bashkir and Chuvash.
+
+
+### 31.4.0
+
+* Add characters:
+  - OCR HOOK (`U+2440`) .. OCR BOW TIE (`U+2445`) (#2465).
+* Add slanted dollar and cent sign (#2408).
+* Add round-top capital A (#2472).
+* Fix `cv41` application to `ss01`, `ss02`, `ss04`, `ss06`, and `ss15`.
+* Fix `cv54` application to `ss01`, `ss03`, `ss04`, `ss06`, `ss07`, `ss09`, `ss12`, `ss14`, `ss15`, `ss17`, and `ss18`.
+* Fix `cv62` application to `ss01`, `ss02`, `ss04`, `ss07`, `ss09`, `ss13`, `ss15`, `ss16`, and `ss18`.
+
+
 ### 31.3.0
 
 * Add `diagonal-tailed-cursive` variants for Cyrillic Lower Ef (`cv93`).
